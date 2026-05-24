@@ -1,9 +1,18 @@
 # Browser Voronoi RVE Generator
 
-Live browser version: https://whutzfk.github.io/browser-voronoi-rve-generator/
+Open the web tool directly:
 
+**https://whutzfk.github.io/browser-voronoi-rve-generator/**
+
+This is the public browser version. Users do **not** need Codex, Git, Node.js, or a local installation to use it.
 
 这是一个纯浏览器运行的 2D 仿生多孔 Voronoi RVE 生成器。打开网页即可输入参数、预览图形，并下载 SVG/PNG。
+
+## Repository Type
+
+- Type: `Browser Tool`
+- Public app: GitHub Pages
+- Codex required: No
 
 ## 参数入口
 

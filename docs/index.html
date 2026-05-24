@@ -3,11 +3,59 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Voronoi RVE Generator</title>
-    <meta http-equiv="refresh" content="0; url=./src/taskpane.html" />
-    <link rel="canonical" href="./src/taskpane.html" />
+    <title>Browser Voronoi RVE Generator</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f7f8;
+        color: #172026;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 48px 24px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 34px;
+        line-height: 1.15;
+        font-weight: 700;
+      }
+
+      p {
+        margin: 0 0 24px;
+        color: #52606b;
+        line-height: 1.55;
+      }
+
+      a.button {
+        display: inline-block;
+        padding: 12px 16px;
+        border-radius: 6px;
+        background: #147a7e;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      a.button:hover {
+        background: #0f6366;
+      }
+    </style>
   </head>
   <body>
-    <p><a href="./src/taskpane.html">Open Voronoi RVE Generator</a></p>
+    <main>
+      <h1>Browser Voronoi RVE Generator</h1>
+      <p>This public web tool runs directly in the browser. No Codex installation, Git checkout, Node.js setup, or local server is required.</p>
+      <p>Generate a 2D biomimetic porous Voronoi RVE, preview the result, and download SVG or PNG files.</p>
+      <a class="button" href="./src/taskpane.html">Open Generator</a>
+    </main>
   </body>
 </html>
