@@ -5,7 +5,7 @@ This project is a static browser-based Voronoi RVE generator.
 Published app URL:
 
 ```text
-https://zfkzxy.github.io/ppt-voronoi-rve-addin/src/taskpane.html
+https://zfkzxy.github.io/browser-voronoi-rve-generator/src/taskpane.html
 ```
 
 Release checklist:
