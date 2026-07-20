@@ -2,7 +2,7 @@
 
 Open the web tool directly:
 
-**https://whutzfk.github.io/browser-voronoi-rve-generator/**
+**https://zfkzxy.github.io/browser-voronoi-rve-generator/**
 
 This is the public browser version. Users do **not** need Codex, Git, Node.js, or a local installation to use it.
 
