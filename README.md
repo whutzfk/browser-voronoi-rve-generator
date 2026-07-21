@@ -1,20 +1,28 @@
 # Browser Voronoi RVE Generator
 
+
 Open the web tool directly:
 
-**https://zfkzxy.github.io/browser-voronoi-rve-generator/**
+
+**https://whutzfk.github.io/browser-voronoi-rve-generator/**
+
 
 This is the public browser version. Users do **not** need Codex, Git, Node.js, or a local installation to use it.
 
+
 这是一个纯浏览器运行的 2D 仿生多孔 Voronoi RVE 生成器。打开网页即可输入参数、预览图形，并下载 SVG/PNG。
 
+
 ## Repository Type
+
 
 - Type: `Browser Tool`
 - Public app: GitHub Pages
 - Codex required: No
 
+
 ## 参数入口
+
 
 - RVE 宽度和高度，单位 `um`
 - 泡孔数量
@@ -27,30 +35,43 @@ This is the public browser version. Users do **not** need Codex, Git, Node.js, o
 - 随机种子
 - 背景、胞壁、胞壁边线、孔隙、孔隙边线、种子点颜色
 
+
 默认参数为 `100 um x 100 um`、`80` 个泡孔、孔隙率约束 `0.75`、发泡倍率 `4.00`、随机结构、目标变异系数 `0.60`、随机种子 `42`。
+
 
 ## 生成逻辑
 
+
 浏览器端使用 `d3-delaunay` 生成边界裁剪的 2D Voronoi 单元。结构均匀度控制种子点分布：`随机` 保持普通随机撒点；`均匀` 对随机点做 Lloyd 质心松弛，使泡孔中心距离更接近；`不均匀` 使用聚簇随机点，使局部泡孔密集、局部稀疏。目标变异系数作为点分布控制参数，生成后界面会显示实际最近邻距离变异系数用于对比。
+
 
 每个 Voronoi 单元按质心向内缩放，得到孔洞区域；2D 面积孔隙率按 `phi_2d = K^2` 与几何缩放因子关联。发泡倍率与孔隙率按 `孔隙率 = 1 - 1 / 发泡倍率` 双向换算。壁厚和孔隙率通过“约束方式”二选一输入，另一个参数自动计算，避免同时输入造成矛盾。
 
+
 点击 `下载SVG` 可保存可编辑矢量图，点击 `下载PNG` 可保存位图。
 
+
 ## 本地运行
+
 
 ```powershell
 npm run dev
 ```
 
+
 浏览器预览：
+
 
 ```text
 http://localhost:3000/src/taskpane.html
 ```
 
+
 也可以直接打开 `src/taskpane.html` 或 GitHub Pages 发布页使用。
+
 
 ## 说明
 
+
 当前版本输出 2D RVE 图像；3D Rhino/Python 导出仍建议使用原 `voronoi-biomimetic-rve` 技能脚本生成。
+
